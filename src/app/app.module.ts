@@ -15,6 +15,7 @@ import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { FormsModule } from '@angular/forms';
 import { EmicalculatorComponent } from './emicalculator/emicalculator.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { EmicalculatorComponent } from './emicalculator/emicalculator.component'
     RectangleComponent,
     CircleComponent,
     BmiComponent,
-    EmicalculatorComponent
+    EmicalculatorComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,

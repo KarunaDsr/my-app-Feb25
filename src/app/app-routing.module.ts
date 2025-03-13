@@ -11,6 +11,7 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { EmicalculatorComponent } from './emicalculator/emicalculator.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 const routes: Routes = [
   {path:'dashboard',component:DashboardComponent,children:[
@@ -36,6 +37,9 @@ const routes: Routes = [
   ]},
   {path:'dashboard',component:DashboardComponent,children:[
     {path:'emical',component:EmicalculatorComponent}
+  ]},
+  {path:'dashboard',component:DashboardComponent,children:[
+    {path:'directives',component:DirectivesComponent}
   ]},
 
   {path: '', component:LoginComponent},
