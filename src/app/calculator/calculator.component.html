@@ -1,0 +1,17 @@
+<div class="parent">
+    <div class="cal">
+        <h1>Calculator</h1>
+
+<label for="">Number1</label>
+<input class="input" type="number" [(ngModel)]="num1"><br><br><br>
+<label for="">Number2</label>
+<input class="input" type="number" [(ngModel)]="num2"><br> <br>
+<div class="button"><button class="A" (click)="add()" [disabled]="!num1||!num2">Add</button>
+    <button class="A" (click)="sub()"[disabled]="!num1||!num2">SUB</button>
+    <button class="A" (click)="mul()"[disabled]="!num1||!num2">Mul</button>
+    <button class="A" (click)="div()"[disabled]="!num1||!num2">Div</button></div>
+
+
+<h2 id="result">Result</h2>
+    </div>
+</div>

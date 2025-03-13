@@ -1,0 +1,14 @@
+<div class="parent">
+    <div class="container">
+        <h2>EMI Calculator</h2>
+        <label for="amount">Amount:</label>
+        <input class="num" type="number" [(ngModel)]="amount"><br><br>
+        <label for="roi">ROI:</label>
+        <input class="num" type="number" [(ngModel)]="roi"><br><br>
+        <label for="tenure">Tenure:</label>
+        <input class="num" type="number" [(ngModel)]="tenure"><br><br>
+        <button class="bt" (click)="calculateemi()">Calculate</button>
+        <h3>{{result}}</h3>
+    </div>
+    
+</div>
