@@ -18,12 +18,18 @@
     
 }
 
-.search-section {
-    margin-bottom: 20px;
+.details{
+    /* display: flex; */
     width: 100%;
-    height: 20%;
-    flex-direction: column;
+    
 }
+
+ /* .search-section {
+    margin-bottom: 20px; 
+    width: 100%;
+    height: 25%;
+    
+}  */
 
 input[type="text"], input[type="number"] {
     margin-right: 10px;

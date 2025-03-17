@@ -18,7 +18,8 @@ import { EmicalculatorComponent } from './emicalculator/emicalculator.component'
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeFlipkartComponent } from './employee-flipkart/employee-flipkart.component';
-
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,12 +36,14 @@ import { EmployeeFlipkartComponent } from './employee-flipkart/employee-flipkart
     EmicalculatorComponent,
     DirectivesComponent,
     EmployeesComponent,
-    EmployeeFlipkartComponent
+    EmployeeFlipkartComponent,
+    VehicleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

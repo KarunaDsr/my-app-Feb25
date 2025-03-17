@@ -14,6 +14,7 @@ import { EmicalculatorComponent } from './emicalculator/emicalculator.component'
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeFlipkartComponent } from './employee-flipkart/employee-flipkart.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
 
 const routes: Routes = [
   {path:'dashboard',component:DashboardComponent,children:[
@@ -50,6 +51,10 @@ const routes: Routes = [
 
   {path:'dashboard',component:DashboardComponent,children:[
     {path:'employees flipkart',component:EmployeeFlipkartComponent}
+  ]},
+
+  {path:'dashboard',component:DashboardComponent,children:[
+    {path:'vehicle',component:VehicleComponent}
   ]},
 
   {path: '', component:LoginComponent},

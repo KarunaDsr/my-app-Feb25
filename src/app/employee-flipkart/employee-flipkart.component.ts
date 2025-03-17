@@ -32,7 +32,7 @@ export class EmployeeFlipkartComponent {
     }
   
     deleteProduct(index: number) {
-      this.products.splice(index, 1);
-    }
+      this.products.splice(index,1);
+}
   }
 
