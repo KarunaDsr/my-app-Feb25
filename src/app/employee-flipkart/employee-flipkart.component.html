@@ -6,9 +6,9 @@
             <div class="search-section">
                 <input type="text" placeholder="Search" [(ngModel)]="searchQuery">
                 <button class="filter-btn blue-btn">Only free delivery</button><br>
-                <button class="filter-btn yellow-btn">price low to high</button> 
-                <button class="filter-btn yellow-btn">price high to low</button><br>
-                <button class="filter-btn yellow-btn">rating low to high</button><br>
+                <button class="filter-btn yellow-btn" (click)="sort()"price Low to High>price low to high</button> 
+                <button class="filter-btn yellow-btn" (click)="sort()"price High to Low>price high to low</button><br>
+                <button class="filter-btn yellow-btn" >rating low to high</button><br>
                 <button class="filter-btn yellow-btn">rating high to low</button><br>
                 <button class="filter-btn blue-btn">Apply 50% discount</button><br>
                 <button class="filter-btn blue-btn">price with delivery changes</button><br>

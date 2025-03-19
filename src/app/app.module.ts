@@ -20,6 +20,10 @@ import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeFlipkartComponent } from './employee-flipkart/employee-flipkart.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EmailComponent } from './email/email.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { WeatherComponent } from './weather/weather.component';
+import { AccountsComponent } from './accounts/accounts.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +41,11 @@ import { HttpClientModule } from '@angular/common/http';
     DirectivesComponent,
     EmployeesComponent,
     EmployeeFlipkartComponent,
-    VehicleComponent
+    VehicleComponent,
+    EmailComponent,
+    FlipkartComponent,
+    WeatherComponent,
+    AccountsComponent
   ],
   imports: [
     BrowserModule,

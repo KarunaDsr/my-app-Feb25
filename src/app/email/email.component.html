@@ -1,0 +1,21 @@
+<h1>Email</h1>
+
+
+<table class="table table-dark" border="1">
+  <thead>
+      <tr>
+          <th>userId</th>
+          <!-- <th>id</th> -->
+          <th>title</th>
+          <!-- <th>Completed</th> -->
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let mails of mail ; let i= index">
+      <td>{{i+1}}</td>
+      <td>{{mail.userId}}</td>
+      <!-- <td>{{mail.id}}</td> -->
+      <td>{{mail.title}}</td>
+      <!-- <td>{{mail.Completed}}</td> -->
+  </tr>
+  </tbody>

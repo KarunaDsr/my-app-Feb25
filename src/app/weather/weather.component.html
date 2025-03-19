@@ -1,0 +1,37 @@
+<div class="weather-card">
+    <h2>Weather in Hyderabad</h2>
+
+    <!-- Dynamic Temperature Dot Color -->
+    <div 
+        class="weather-dot" 
+        [ngStyle]="{
+            'background-color': weather.temperature < 0 ? 'blue' :
+                                weather.temperature < 30 ? 'yellow' :
+                                weather.temperature < 35 ? 'green' :
+                                'red'
+        }">
+    </div>
+
+    <!-- Temperature Display -->
+    <div class="temperature">
+        {{ weather.temperature }}°C
+    </div>
+
+    <!-- Wind Details -->
+    <div class="wind-info">
+        Wind Speed: {{ weather.windSpeed }} km/h
+        <br>
+        Wind Direction: {{ weather.windDirection }}° ({{ (weather.windDirection) }})
+    </div>
+
+    <!-- Day/Night Display -->
+    <div class="day-night">
+        {{ weather.isDay ? 'Daytime' : 'Nighttime' }}
+
+    </div>
+
+    <!-- Time Display -->
+    <div class="time">
+        {{ weather.time | date:'medium':'UTC+5:30' }}
+    </div>
+</div>

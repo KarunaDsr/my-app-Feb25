@@ -15,6 +15,10 @@ import { DirectivesComponent } from './directives/directives.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeFlipkartComponent } from './employee-flipkart/employee-flipkart.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
+import { EmailComponent } from './email/email.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { WeatherComponent } from './weather/weather.component';
+import { AccountsComponent } from './accounts/accounts.component';
 
 const routes: Routes = [
   {path:'dashboard',component:DashboardComponent,children:[
@@ -55,6 +59,22 @@ const routes: Routes = [
 
   {path:'dashboard',component:DashboardComponent,children:[
     {path:'vehicle',component:VehicleComponent}
+  ]},
+
+  {path:'dashboard',component:DashboardComponent,children:[
+    {path:'email',component:EmailComponent}
+  ]},
+
+  {path:'dashboard',component:DashboardComponent,children:[
+    {path:'flipkart',component:FlipkartComponent}
+  ]},
+
+  {path:'dashboard',component:DashboardComponent,children:[
+    {path:'weather',component:WeatherComponent}
+  ]},
+
+  {path:'dashboard',component:DashboardComponent,children:[
+    {path:'accounts',component:AccountsComponent}
   ]},
 
   {path: '', component:LoginComponent},

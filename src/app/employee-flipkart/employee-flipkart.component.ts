@@ -1,3 +1,4 @@
+import { provideCloudflareLoader } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -34,5 +35,13 @@ export class EmployeeFlipkartComponent {
     deleteProduct(index: number) {
       this.products.splice(index,1);
 }
+
+sort() {
+  this.products.sort((a: any, b: any) =>
+       a.price - b.price 
+  );
+}
+
+
   }
 
