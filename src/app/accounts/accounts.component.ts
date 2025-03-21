@@ -10,10 +10,12 @@ export class AccountsComponent {
   accounts:any=[];
   term:string='';
 constructor(private accountsService:AccountsService){
+this.loadaccounts();
  accountsService.getaccounts().subscribe(
     (data:any)=>{
       console.log(data);
       this.accounts=data;
+      console.log(this.accounts);
     },(err:any)=>{
       alert("Internal Server Error")
     }
@@ -29,7 +31,7 @@ filter(){
        },(err:any)=>{
          alert("Internal Server Error!");
        }
-   )
+   );
    }
 column:string='';
 order:string='';
@@ -47,8 +49,9 @@ sort(){
 loadaccounts(){
   this.accountsService.getaccounts().subscribe(
     (data:any)=>{
-      console.log(data);
-      this.accounts=data;
+      // console.log(data);
+
+      // this.accounts=data;
       console.log(this.accounts);
     },(err:any)=>{
       alert("Internal server Error");

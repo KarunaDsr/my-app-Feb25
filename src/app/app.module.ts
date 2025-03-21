@@ -13,7 +13,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmicalculatorComponent } from './emicalculator/emicalculator.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeesComponent } from './employees/employees.component';
@@ -24,6 +24,10 @@ import { EmailComponent } from './email/email.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { WeatherComponent } from './weather/weather.component';
 import { AccountsComponent } from './accounts/accounts.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { StudentsComponent } from './students/students.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,13 +49,18 @@ import { AccountsComponent } from './accounts/accounts.component';
     EmailComponent,
     FlipkartComponent,
     WeatherComponent,
-    AccountsComponent
+    AccountsComponent,
+    CreateVehicleComponent,
+    CreateAccountComponent,
+    StudentsComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

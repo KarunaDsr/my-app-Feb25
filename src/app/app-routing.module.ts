@@ -19,6 +19,10 @@ import { EmailComponent } from './email/email.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { WeatherComponent } from './weather/weather.component';
 import { AccountsComponent } from './accounts/accounts.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { StudentsComponent } from './students/students.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 const routes: Routes = [
   {path:'dashboard',component:DashboardComponent,children:[
@@ -75,6 +79,22 @@ const routes: Routes = [
 
   {path:'dashboard',component:DashboardComponent,children:[
     {path:'accounts',component:AccountsComponent}
+  ]},
+
+  {path:'dashboard',component:DashboardComponent,children:[
+    {path:'create-vehicle',component:CreateVehicleComponent}
+  ]},
+
+  {path:'dashboard',component:DashboardComponent,children:[
+    {path:'create-account',component:CreateAccountComponent}
+  ]},
+
+  {path:'dashboard',component:DashboardComponent,children:[
+    {path:'students',component:StudentsComponent}
+  ]},
+
+  {path:'dashboard',component:DashboardComponent,children:[
+    {path:'create-user',component:CreateUserComponent}
   ]},
 
   {path: '', component:LoginComponent},

@@ -17,10 +17,10 @@ getFlipkart():Observable<any>{
   return this._httpClient .get("https://fakestoreapi.com/products")
 
 }
-// getFilteredVehicles(term:any):Observable<any>{
-//   return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?filter="+term);
+getFilteredVehicles(term:any):Observable<any>{
+ return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?filter="+term);
 
-// }
+}
 
 getSortedVehicles(column:any,order:any):Observable<any>{
   return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?sortBy="+column+"&order="+order);
@@ -36,4 +36,9 @@ deleteVehicles(id:any):Observable<any>{
   return this._httpClient.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id);
  
 }
+
+createVehicle(data:any):Observable<any>{
+  return this._httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction",data)
+}
+
 }

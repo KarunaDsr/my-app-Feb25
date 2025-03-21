@@ -21,13 +21,17 @@ getSortedaccounts(column:any,order:any): Observable<any>{
 }
 
 getPaginatedaccounts(limit:any,page:any):Observable<any>{
-  return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?limit="+limit+"&page="+page);
+  return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals?limit="+limit+"&page="+page);
  
 }
 
 deleteaccounts(id:any):Observable<any>{
-  return this.httpClient.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id);
+  return this.httpClient.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id);
  
+}
+
+createaccounts(data:any):Observable<any>{
+  return this.httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/principals",data)
 }
 
 }

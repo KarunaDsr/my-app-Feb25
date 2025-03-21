@@ -8,7 +8,7 @@ import { VehicleService } from '../vehicle.service';
 })
 export class VehicleComponent {
   term:string='';
-Vehicles: any;
+Vehicles: any=[]
 
 constructor(private _vehicleservice:VehicleService){
   this.loadVehicles();
@@ -23,16 +23,17 @@ constructor(private _vehicleservice:VehicleService){
   )
 }
 
-// filter(){
-//   this._vehicleservice.getFilteredVehicles(this.term).subscribe(
-//     (data:any)=>{
-//       console.log(data);
-//       this.Vehicles=data;
-//     },(err:any)=>{
-//       alert("Internal Server Error!");
-//     }
-// )
-// }
+ filter(){
+   this._vehicleservice.getFilteredVehicles(this.term).subscribe(
+     (data:any)=>{
+       console.log(data);
+       alert('hello')
+       this.Vehicles=data;
+     },(err:any)=>{
+       alert("Internal Server Error!");
+     }
+ )
+ }
 
 column:string='';
 order:string='';
