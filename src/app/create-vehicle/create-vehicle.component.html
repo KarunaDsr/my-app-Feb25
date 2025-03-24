@@ -1,19 +1,19 @@
+<h1 *ngIf="!id">Create Vehicle</h1>
+<h1 *ngIf="id">Update Vehicle</h1>
+
 <form [formGroup]="vehicleForm">
-<label >Vehicle Name</label>
-<input type="text" formControlName="Vehicle"><br>
-<label >Color</label>
-<input type="text" formControlName="color"><br>
+  <label>Vehicle Name</label>
+  <input type="text" formControlName="Vehicle" /><br />
+  <label>Color</label>
+  <input type="text" formControlName="color" /><br />
 
-<label >Cost</label>
-<input type="text" formControlName="cost"><br>
+  <label>Cost</label>
+  <input type="text" formControlName="cost" /><br />
 
-<label >Fuel</label>
-<input type="text" formControlName="fuel"><br>
+  <label>Fuel</label>
+  <input type="text" formControlName="fuel" /><br />
 
-
-
-<button (click)="create()" class="btn btn-info">Create Vehicle</button>
-
-
-
+  <button (click)="create()" class="btn btn-info">
+    {{ id ? "Update" : "Create" }}
+  </button>
 </form>

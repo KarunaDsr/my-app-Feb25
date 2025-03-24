@@ -7,15 +7,17 @@ import { StudentsService } from '../students.service';
   styleUrls: ['./students.component.css']
  })
  export class StudentsComponent {
-//   students:Student[]=[];
-//   Accounts:any;
-// constructor(private studentService:StudentsService){
-//   studentService.getstudents().subscribe(
-//     (data:any)=>{
-//       console.log(data);
-//     },(err:any)=>{
-//       alert("Internal Server Error")
-//     }
-//   )
-// }
- }
+   students:any=[];
+   card:any;
+ constructor(private studentService:StudentsService){
+   studentService.getstudents().subscribe(
+     (data:any)=>{
+       console.log(data);
+       this.students=data
+     },(err:any)=>{
+       alert("Internal Server Error")
+     }
+   )
+  }
+}
+
