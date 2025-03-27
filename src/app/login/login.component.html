@@ -1,2 +1,8 @@
-<button routerLink="/dashboard">Click here to Dashboard</button>
-
+<!-- <button routerLink="/dashboard">Click here to Dashboard</button> -->
+<form [formGroup]="loginForm">
+    <label for="">Email</label>
+    <input type="email" formControlName="email"><br>
+    <label for="">Password</label>
+    <input type="password" formControlName="password"><br>
+    <button class="btn btn-primary" (click)="login()">Login</button>
+</form>

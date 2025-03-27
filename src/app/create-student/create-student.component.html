@@ -1,0 +1,22 @@
+<h1 *ngIf="!id">Create Student</h1>
+<h1 *ngIf="id">Update Student</h1>
+
+<form [formGroup]="studentForm">
+  <label>Student Name</label>
+  <input type="text" formControlName="name" /><br />
+  <label>City</label>
+  <input type="text" formControlName="city" /><br />
+
+  <label>DoB</label>
+  <input type="month" formControlName="dob" /><br />
+
+  <label>Phone</label>
+  <input type="number" formControlName="phone" /><br />
+
+  <label>Email</label>
+  <input type="email" formControlName="email" /><br />
+
+  <button (click)="create()" class="btn btn-info">
+    {{ id ? "Update" : "Create" }}
+  </button>
+</form>

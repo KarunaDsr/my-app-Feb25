@@ -24,104 +24,83 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { StudentsComponent } from './students/students.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { AuthenticationGuard } from './authentication.guard';
+import { StudentDetailsComponent } from './student-details/student-details.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'welcome',component:WelcomeComponent}
-  ]},
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'home',component:HomeComponent},
-  ]},
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'binding',component:BindingComponent}
-  ]},
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'calculator',component:CalculatorComponent}
-  ]},
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'rectangle',component:RectangleComponent}
-  ]},
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'circle',component:CircleComponent}
-  ]},
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'bmi',component:BmiComponent}
-  ]},
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'emical',component:EmicalculatorComponent}
-  ]},
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'directives',component:DirectivesComponent}
-  ]},
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [AuthenticationGuard],
+    children: [
+      { path: 'welcome', component: WelcomeComponent },
 
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'employees',component:EmployeesComponent}
-  ]},
+      { path: 'home', component: HomeComponent },
 
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'employees flipkart',component:EmployeeFlipkartComponent}
-  ]},
-
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'vehicle',component:VehicleComponent}
-  ]},
-
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'email',component:EmailComponent}
-  ]},
-
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'flipkart',component:FlipkartComponent}
-  ]},
-
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'weather',component:WeatherComponent}
-  ]},
-
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'accounts',component:AccountsComponent}
-  ]},
-
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'create-vehicle',component:CreateVehicleComponent}
-  ]},
-
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'create-account',component:CreateAccountComponent}
-  ]},
-
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'students',component:StudentsComponent}
-  ]},
-
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'create-user',component:CreateUserComponent},
-  ]},
-
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'vehicle-details/:id',component:VehicleDetailsComponent},
-    {path:'edit-vehicle/:id',component:CreateVehicleComponent},
-  
-  ]},
-
- 
+      { path: 'sibling', component: Sibling1Component },
+      { path: 'parent', component: ParentComponent },
 
 
-  {path: '', component:LoginComponent},
-  {path: 'login', component:LoginComponent},
-  {path:'**',component:Error404Component}, //Wild-card routing
-  
-  {path: 'binding', component:BindingComponent},
-  {path: 'calculator', component:CalculatorComponent},
-  {path: 'rectangle', component:RectangleComponent},
-  {path: 'circle', component:CircleComponent},
-  {path: 'bmi', component:BmiComponent},
-  {path:'emical',component:EmicalculatorComponent}
+      { path: 'binding', component: BindingComponent },
 
+      { path: 'calculator', component: CalculatorComponent },
+
+      { path: 'rectangle', component: RectangleComponent },
+
+      { path: 'circle', component: CircleComponent },
+
+      { path: 'bmi', component: BmiComponent },
+
+      { path: 'emical', component: EmicalculatorComponent },
+
+      { path: 'directives', component: DirectivesComponent },
+
+      { path: 'employees', component: EmployeesComponent },
+
+      { path: 'employees flipkart', component: EmployeeFlipkartComponent },
+
+      { path: 'vehicle', component: VehicleComponent },
+
+      { path: 'email', component: EmailComponent },
+
+      { path: 'flipkart', component: FlipkartComponent },
+
+      { path: 'weather', component: WeatherComponent },
+
+      { path: 'accounts', component: AccountsComponent },
+
+      { path: 'create-vehicle', component: CreateVehicleComponent },
+
+      { path: 'create-account', component: CreateAccountComponent },
+
+      { path: 'students', component: StudentsComponent },
+
+      { path: 'create-user', component: CreateUserComponent },
+
+      { path: 'vehicle-details/:id', component: VehicleDetailsComponent },
+      { path: 'edit-vehicle/:id', component: CreateVehicleComponent },
+       {path: 'student-details/:id', component:StudentDetailsComponent},
+       { path: 'create-student', component:CreateStudentComponent }
+    ],
+  },
+
+  { path: '', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
+  { path: '**', component: Error404Component }, //Wild-card routing
+
+  { path: 'binding', component: BindingComponent },
+  { path: 'calculator', component: CalculatorComponent },
+  { path: 'rectangle', component: RectangleComponent },
+  { path: 'circle', component: CircleComponent },
+  { path: 'bmi', component: BmiComponent },
+  { path: 'emical', component: EmicalculatorComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
