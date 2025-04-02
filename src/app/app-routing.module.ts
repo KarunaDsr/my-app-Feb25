@@ -29,6 +29,7 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { Sibling1Component } from './sibling1/sibling1.component';
 import { ParentComponent } from './parent/parent.component';
+import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
 
 const routes: Routes = [
   {
@@ -79,6 +80,8 @@ const routes: Routes = [
       { path: 'students', component: StudentsComponent },
 
       { path: 'create-user', component: CreateUserComponent },
+
+      { path: 'life-cycle-hooks', component: LifeCycleHooksComponent },
 
       { path: 'vehicle-details/:id', component: VehicleDetailsComponent },
       { path: 'edit-vehicle/:id', component: CreateVehicleComponent },

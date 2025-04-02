@@ -38,6 +38,7 @@ import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
 import { CapitalDirective } from './capital.directive';
 import { AboutUsModule } from './about-us/about-us.module';
+import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,6 +74,7 @@ import { AboutUsModule } from './about-us/about-us.module';
     ChildComponent,
     RatingComponent,
     CapitalDirective,
+    LifeCycleHooksComponent,
     
   ],
   imports: [
