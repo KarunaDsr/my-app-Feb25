@@ -37,6 +37,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
 import { CapitalDirective } from './capital.directive';
+import { AboutUsModule } from './about-us/about-us.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,14 +72,16 @@ import { CapitalDirective } from './capital.directive';
     ParentComponent,
     ChildComponent,
     RatingComponent,
-    CapitalDirective
+    CapitalDirective,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutUsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

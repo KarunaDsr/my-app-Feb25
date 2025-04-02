@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { Error404Component } from './error404/error404.component';
@@ -83,7 +83,11 @@ const routes: Routes = [
       { path: 'vehicle-details/:id', component: VehicleDetailsComponent },
       { path: 'edit-vehicle/:id', component: CreateVehicleComponent },
        {path: 'student-details/:id', component:StudentDetailsComponent},
-       { path: 'create-student', component:CreateStudentComponent }
+       { path: 'create-student', component:CreateStudentComponent },
+       {
+        path:'payments',
+        loadChildren:()=>import('./payments/payments.module').then(m => m.PaymentsModule)
+       }
     ],
   },
 
@@ -100,7 +104,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
